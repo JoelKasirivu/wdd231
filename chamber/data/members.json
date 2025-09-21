@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Makindye Coffee Co.",
+    "address": "123 Brew St, Makindye",
+    "phone": "+256 700 123456",
+    "website": "https://makindyecoffee.com",
+    "image": "coffee.png",
+    "membership": 3,
+    "description": "Premium Ugandan coffee roaster."
+  },
+  {
+    "name": "Sunrise Tech Solutions",
+    "address": "45 Innovation Rd, Makindye",
+    "phone": "+256 701 654321",
+    "website": "https://sunrisetech.ug",
+    "image": "logo2.png",
+    "membership": 2,
+    "description": "IT services and software development."
+  },
+  {
+    "name": "GreenLeaf Organics",
+    "address": "78 Eco Lane, Makindye",
+    "phone": "+256 702 987654",
+    "website": "https://greenleaf.ug",
+    "image": "logo1.png",
+    "membership": 1,
+    "description": "Organic farming and produce delivery."
+  },
+  {
+    "name": "Makindye Fitness Hub",
+    "address": "22 Wellness Ave, Makindye",
+    "phone": "+256 703 112233",
+    "website": "https://makindyefitness.com",
+    "image": "logo1.png",
+    "membership": 2,
+    "description": "Modern gym and wellness center."
+  },
+  {
+    "name": "Bright Minds Academy",
+    "address": "90 Learning St, Makindye",
+    "phone": "+256 704 445566",
+    "website": "https://brightminds.ac.ug",
+    "image": "coffee.png",
+    "membership": 3,
+    "description": "Private school offering quality education."
+  },
+  {
+    "name": "Makindye Artisans",
+    "address": "12 Craft Blvd, Makindye",
+    "phone": "+256 705 778899",
+    "website": "https://makindyeartisans.org",
+    "image": "logo2.png",
+    "membership": 1,
+    "description": "Handmade crafts and local art."
+  },
+  {
+    "name": "SafeRide Transport",
+    "address": "34 Mobility Way, Makindye",
+    "phone": "+256 706 334455",
+    "website": "https://saferide.ug",
+    "image": "coffee.png",
+    "membership": 2,
+    "description": "Reliable transport and logistics."
+  },
+  {
+    "name": "Healthy Living Clinic",
+    "address": "56 Care St, Makindye",
+    "phone": "+256 707 667788",
+    "website": "https://healthyliving.ug",
+    "image": "coffee.png",
+    "membership": 3,
+    "description": "Comprehensive healthcare services."
+  }
+]
