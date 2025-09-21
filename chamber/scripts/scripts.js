@@ -1,5 +1,3 @@
-script.js
-
 // Footer date
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
@@ -62,16 +60,19 @@ const membershipLabels = { 1: "Member", 2: "Silver", 3: "Gold" };
 
 async function loadSpotlights() {
   try {
-    const response = await fetch("data/member.json");
+    // Corrected JSON filename
+    const response = await fetch("data/members.json");
     if (!response.ok) throw new Error("Member data unavailable");
     const data = await response.json();
 
+    // Filter for Silver and Gold members
     const goldSilver = data.filter(m => m.membership === 2 || m.membership === 3);
+    // Randomly select up to 3
     const selected = goldSilver.sort(() => 0.5 - Math.random()).slice(0, 3);
 
     spotlightContainer.innerHTML = selected
       .map(member => `
-        <div>
+        <div class="spotlight-card">
           <h3>${member.name}</h3>
           <img src="images/${member.image}" alt="Logo of ${member.name}" loading="lazy" />
           <p>${member.phone}</p>
