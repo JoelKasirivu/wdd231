@@ -1,0 +1,29 @@
+@media screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+    
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  #courseCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+

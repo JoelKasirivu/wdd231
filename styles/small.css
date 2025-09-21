@@ -1,0 +1,76 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background: blueviolet;
+  color: #333;
+}
+
+header, nav, main, footer {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#hamburger {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 2rem;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+}
+
+nav a {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #333;
+}*/
+
+/* Base styles for navigation menu */
+#navMenu {
+  /* use flexbox to center the menu items */
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  width: 100%;
+}
+
+#navMenu ul {
+  /* sets the default to a vertical stack */
+  display: flex;
+  flex-direction: column;
+  
+  /* Remove default list styling */
+  list-style-type: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+
+}
+
+/* Basic styling for each list item */
+#navMenu ul li {
+  border-bottom: 1px solid #ccc; /* Optional: adds a separator between items */
+  margin: 0.5rem 0; /* Space between list items */
+}
+
+#navmenu li:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+/* Styles for the links inside the list items */
+#navMenu ul li a {
+  display: block; /* Make the entire list item clickable */
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Link color */
+  padding: 0.5rem 1rem; /* Padding for better click area */
+  background-color: #fff;
+  transition:cubic-bezier(1, 0, 0, 1) 0.3s; /* Smooth background color transition */
+}
+
+#navMenu a:hover {
+  background-color: #e0e0e0; /* Change background on hover */
+}
+

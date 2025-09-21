@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WDD 231 Course Home Page" />
+  <meta name="author" content="Joel Kasirivu" />
+  <title>WDD 231 | Course Home Page</title>
+  <meta property="og:description" content="Discover a service-oriented, globally-connected Christian church that is led by a prophet of God and seeks to follow Jesus Christ and His restored gospel.">
+  <meta property="og:image" content="https://www.churchofjesuschrist.org/imgs/45e59c1c726d11ec9eb5eeeeac1ea79d5f76a9ce/full/!1280%2C674/0/default">
+  <meta property="og:title" content="Homepage - The Church of Jesus Christ of Latter-day Saints">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+
+  <!-- JavaScript -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/svg-logo.png" alt="Site Logo" />
+    <span>Joel Kasirivu</span>
+    <button id="hamburger" aria-label="Toggle Navigation">☰</button>
+  </header>
+
+  <nav id="navMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chamber.html">Chamber</a></li>
+      <li><a href="final.html">Final</a></li>
+    </ul>
+    
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+    <section>
+      <h2>Welcome to my wdd321-BYU-IDAHO</h2>
+      <p>This is your WDD 231 course homepage.</p>
+      <img src="images/myprofile.jpg" alt="WDD 231 Logo" />
+    </section>
+    <section>
+      <h2>Certificate Courses</h2>
+      <div id="courseButtons">
+        <button id="allBtn">All Courses</button>
+        <button id="wddBtn">WDD Courses</button>
+        <button id="cseBtn">CSE Courses</button>
+      </div>
+      <div id="courseCards"></div>
+      <p>Total Credits: <span id="creditTotal">0</span></p>
+    </section>
+    <section>
+      <h2>Resources</h2>
+      <p>Helpful links and documentation.</p>
+      <ul>
+        <li><a href="https://www.byu.edu/">BYU Idaho</a></li>
+        <li><a href="https://www.byui.edu/online-learning">BYU Idaho Online Learning</a></li>
+        <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+        <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+        <li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
+
+    </section>
+  </main>
+
+  <footer>
+    <div id="socialLinks">
+      <a href="https://github.com/joelkasirivu" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/joelkasirivu-1201b2315" target="_blank">LinkedIn</a>
+      <a href="#">Other</a>
+    </div>
+    <p>&copy; <span id="year"></span> joel kasirivu, Uganda</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
