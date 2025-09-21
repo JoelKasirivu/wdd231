@@ -1,0 +1,27 @@
+[
+  {
+    "name": "BrightTech Solutions",
+    "image": "logo1.png",
+    "phone": "555-1234",
+    "address": "123 Innovation Way",
+    "website": "https://brighttech.com",
+    "membership": 3
+  },
+  {
+    "name": "GreenLeaf Market",
+    "image": "logo2.png",
+    "phone": "555-5678",
+    "address": "456 Organic Blvd",
+    "website": "https://greenleaf.com",
+    "membership": 2
+  },
+  {
+    "name": "Urban Coffee Co.",
+    "image": "logo3.png",
+    "phone": "555-9012",
+    "address": "789 Brew St",
+    "website": "https://urbancoffee.com",
+    "membership": 1
+  }
+]   
+

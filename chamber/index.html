@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Makindye Chamber of Commerce Directory - Discover local businesses and services." />
+  <meta name="author" content="Joel Kasirivu" />
+  <meta name="keywords" content="Makindye, Chamber of Commerce, Business Directory, Local Businesses, Uganda" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Makindye Chamber of Commerce Directory" />
+  <meta property="og:description" content="Explore Makindye's vibrant business community." />
+  <meta property="og:image" content="images/social-preview.png" />
+  <meta property="og:url" content="https://joelkasirivu.github.io/wdd231/chamber/index.html" />
+
+  <title>Makindye Chamber Home</title>
+  <link rel="icon" href="../chamber/images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../chamber/styles/styles.css" />
+  <script src="../chamber/scripts/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Makindye Chamber of Commerce</h1>
+    <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Makindye cityscape" loading="lazy" />
+      <a class="cta" href="join.html" aria-label="Join the Chamber">Join the Chamber</a>
+    </section>
+
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li>Business Mixer Sept 25</li>
+        <li>Local Market Day Oct 3</li>
+      </ul>
+    </section>
+
+    <section class="weather">
+      <h2>Local Weather</h2>
+      <div id="weather-container"></div>
+    </section>
+
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Makindye Chamber | Joel Kasirivu</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
