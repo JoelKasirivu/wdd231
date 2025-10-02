@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Makindye Chamber</title>
+  <link rel="stylesheet" href="../chamber/styles/join.css" />
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const fields = ["firstName", "lastName", "email", "phone", "organization", "timestamp"];
+      fields.forEach(field => {
+        const value = params.get(field);
+        if (value) {
+          const span = document.getElementById(field);
+          if (span) span.textContent = decodeURIComponent(value);
+        }
+      });
+
+      // Footer info
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById("lastModified").textContent = document.lastModified;
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Thank You for Joining!</h1>
+  </header>
+
+  <main>
+    <section>
+      <p>We appreciate your interest in the Makindye Chamber of Commerce. Here is a summary of your submission:</p>
+      <ul>
+        <li><strong>First Name:</strong> <span id="firstName"></span></li>
+        <li><strong>Last Name:</strong> <span id="lastName"></span></li>
+        <li><strong>Email:</strong> <span id="email"></span></li>
+        <li><strong>Mobile Phone:</strong> <span id="phone"></span></li>
+        <li><strong>Organization:</strong> <span id="organization"></span></li>
+        <li><strong>Submitted On:</strong> <span id="timestamp"></span></li>
+      </ul>
+      <p>We will be in touch soon with more details about your membership.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Makindye Chamber | Joel Kasirivu</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
