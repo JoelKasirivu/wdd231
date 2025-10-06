@@ -115,6 +115,9 @@ input, select, textarea {
   }
 }
 
+
+
+
 @media (max-width: 767px) {
   .modal-content {
     padding: 1rem;
@@ -124,3 +127,5 @@ input, select, textarea {
     flex: 1 1 100%;
   }
 }
+  
+  

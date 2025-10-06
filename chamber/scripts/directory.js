@@ -51,4 +51,3 @@ document.getElementById("listView").addEventListener("click", () => {
 });
 
 loadMembers();
-

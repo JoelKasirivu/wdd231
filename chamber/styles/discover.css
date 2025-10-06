@@ -1,0 +1,193 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header, footer {
+  background: #003366;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0.5rem 0;
+}
+
+#menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background: #f9f9f9;
+}
+
+.card figure img {
+  width: 100%;
+  height: auto;
+}
+
+/* Assign grid areas */
+.card:nth-child(1) { grid-area: card1; }
+.card:nth-child(2) { grid-area: card2; }
+.card:nth-child(3) { grid-area: card3; }
+.card:nth-child(4) { grid-area: card4; }
+.card:nth-child(5) { grid-area: card5; }
+.card:nth-child(6) { grid-area: card6; }
+.card:nth-child(7) { grid-area: card7; }
+.card:nth-child(8) { grid-area: card8; }
+
+/* Hover effect for desktop only */
+@media (min-width: 641px) {
+  .card figure img:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #004080;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect: color change and underline animation */
+nav a:hover {
+  color: #ffcc00; /* Bright accent color */
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #ffcc00;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+@media (min-width: 641px) {
+  nav {
+    display: flex;
+    justify-content: center; /* Centers the nav links horizontally */
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  #menu-toggle {
+    display: none; /* Hide hamburger on large screens */
+  }
+}
+
+@media (min-width: 641px) {
+  nav {
+    display: flex;
+    justify-content: center; /* Centers the nav links horizontally */
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  #menu-toggle {
+    display: none; /* Hide hamburger on large screens */
+  }
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect: color change */
+nav a:hover {
+  color: #ffcc00; /* Bright yellow accent */
+}
+
+/* Optional: animated underline */
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffcc00;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+

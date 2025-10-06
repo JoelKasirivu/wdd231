@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Ggaba Beach",
+    "address": "Ggaba Road, Kampala",
+    "description": "A popular lakeside destination with fresh fish and scenic views.",
+    "image": "images/logo7.webp"
+  },
+  {
+    "name": "Makindye Market",
+    "address": "Makindye Hill Rd, Kampala",
+    "description": "Bustling local market with fresh produce and crafts.",
+    "image": "images/logo8.webp"
+  },
+  {
+    "name": "St. Barnabas Church",
+    "address": "Makindye Division, Kampala",
+    "description": "Historic Anglican church with beautiful architecture.",
+    "image": "images/logo7.webp"
+  },
+  {
+    "name": "Kampala International University",
+    "address": "Ggaba Rd, Kampala",
+    "description": "A leading institution for higher education in Uganda.",
+    "image": "images/logo9.webp"
+  },
+  {
+    "name": "Makindye Police Barracks",
+    "address": "Makindye Hill, Kampala",
+    "description": "A key security institution with historical significance.",
+    "image": "images/logo9.webp"
+  },
+  {
+    "name": "Cafe Javas",
+    "address": "Ggaba Rd, Kampala",
+    "description": "Popular café offering continental meals and great ambiance.",
+    "image": "images/logo7.webp"
+  },
+  {
+    "name": "Makindye Health Center",
+    "address": "Makindye Division, Kampala",
+    "description": "Community health services and outreach programs.",
+    "image": "images/logo8.webp"
+  },
+  {
+    "name": "Makindye Hill View",
+    "address": "Makindye Hill, Kampala",
+    "description": "Panoramic views of Lake Victoria and the city skyline.",
+    "image": "images/logo9.webp"
+  }
+]

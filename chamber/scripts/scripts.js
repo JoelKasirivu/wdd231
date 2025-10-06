@@ -4,7 +4,7 @@ document.getElementById("lastModified").textContent = document.lastModified;
 
 // Responsive navigation toggle
 document.getElementById("menu-toggle").addEventListener("click", () => {
-  document.querySelector("nav ul").classList.toggle("active");
+  document.getElementById("menu").classList.toggle("show");
 });
 
 // Weather API
@@ -32,59 +32,69 @@ async function loadWeather() {
     const forecast = data.list.filter((_, i) => i % 8 === 0).slice(1, 4);
 
     weatherContainer.innerHTML = `
-      <p>
-        <img src="https://openweathermap.org/img/wn/${today.weather[0].icon}@2x.png" 
-             alt="${today.weather[0].description}" />
-        Current: ${today.main.temp}°C, ${today.weather[0].description}
-      </p>
-      <h3>3-Day Forecast</h3>
-      <ul>
-        ${forecast
-          .map(
-            day =>
-              `<li>${formatDate(day.dt_txt)}: ${day.main.temp}°C</li>`
-          )
-          .join("")}
-      </ul>
+      <div>
+        <h3>Today</h3>
+        <p>${formatDate(today.dt_txt)}</p>
+        <img src="https://openweathermap.org/img/wn/${today.weather[0].icon}@2x.png" alt="${today.weather[0].description}" />
+        <p>${today.main.temp}°C - ${today.weather[0].description}</p>
+      </div>
+      ${forecast.map(day => `
+        <div>
+          <h3>${formatDate(day.dt_txt)}</h3>
+          <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="${day.weather[0].description}" />
+          <p>${day.main.temp}°C - ${day.weather[0].description}</p>
+        </div>
+      `).join('')}
     `;
   } catch (error) {
     weatherContainer.innerHTML = `<p>Unable to load weather data.</p>`;
     console.error(error);
   }
 }
+
 loadWeather();
+// Lazy load images
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll("img[data-src]");
+  const options = { threshold: 0.1, rootMargin: "0px 0px 50px 0px" };
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.getAttribute("data-src");
+        img.removeAttribute("data-src");
+        obs.unobserve(img);
+      } 
+    });
+  }, options);
 
-// Spotlights
-const spotlightContainer = document.getElementById("spotlight-container");
-const membershipLabels = { 1: "Member", 2: "Silver", 3: "Gold" };
+  images.forEach(img => observer.observe(img));
+});
 
-async function loadSpotlights() {
-  try {
-    // Corrected JSON filename
-    const response = await fetch("data/members.json");
-    if (!response.ok) throw new Error("Member data unavailable");
-    const data = await response.json();
+// Form validation
+const form = document.getElementById("contact-form"); 
+if (form) {
+  form.addEventListener("submit", event => {
+    const name = form.elements["name"].value.trim();
+    const email = form.elements["email"].value.trim();
+    const message = form.elements["message"].value.trim();
+    let valid = true;
 
-    // Filter for Silver and Gold members
-    const goldSilver = data.filter(m => m.membership === 2 || m.membership === 3);
-    // Randomly select up to 3
-    const selected = goldSilver.sort(() => 0.5 - Math.random()).slice(0, 3);
+    if (name.length < 2) {
+      valid = false;
+      alert("Please enter a valid name.");
+    }
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+      valid = false;
+      alert("Please enter a valid email address.");
+    }
+    if (message.length < 10) {
+      valid = false;
+      alert("Message must be at least 10 characters.");
+    }
 
-    spotlightContainer.innerHTML = selected
-      .map(member => `
-        <div class="spotlight-card">
-          <h3>${member.name}</h3>
-          <img src="images/${member.image}" alt="Logo of ${member.name}" loading="lazy" />
-          <p>${member.phone}</p>
-          <p>${member.address}</p>
-          <a href="${member.website}" target="_blank" rel="noopener" aria-label="Visit ${member.name}'s website">Visit Website</a>
-          <p>Membership: ${membershipLabels[member.membership]}</p>
-        </div>
-      `)
-      .join("");
-  } catch (error) {
-    spotlightContainer.innerHTML = `<p>Unable to load spotlight members.</p>`;
-    console.error(error);
+    if (!valid) event.preventDefault();
   }
-}
-loadSpotlights();
+);
+} 
