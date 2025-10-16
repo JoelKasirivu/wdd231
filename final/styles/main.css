@@ -1,0 +1,343 @@
+:root {
+  --primary: #4b2e83;
+  --accent: #f4e9cd;
+  --text: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: var(--accent);
+}
+
+header, footer {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+/* Ensure footer stays at the bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+
+.quote-card {
+  background: white;
+  border-left: 6px solid var(--primary);
+  margin: 1rem 0;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.quote-card h3 {
+  margin: 0;
+  color: var(--primary);
+}
+
+.quote-card p {
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+.quote-card small {
+  display: block;
+  color: #666;
+}
+
+.filter-buttons {
+  margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.filter-buttons button:hover {
+  background: #3a2466;
+}
+
+/* Filter buttons */
+.filter-buttons {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-buttons button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-buttons button:hover {
+  background: #3a2466;
+}
+
+/* Quote card layout */
+.quote-card {
+  background: white;
+  border-left: 6px solid var(--primary);
+  margin: 1rem 0;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.quote-card h3 {
+  margin: 0;
+  color: var(--primary);
+}
+
+.quote-card p {
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+.quote-card small {
+  display: block;
+  color: #666;
+}
+
+.quote-actions {
+  margin-top: 0.5rem;
+}
+
+.quote-actions button {
+  margin-right: 0.5rem;
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quote-actions button:hover {
+  background: #ddd;
+}
+
+/* Navigation styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  padding: 1rem;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: var(--primary);
+    width: 100%;
+    display: none;
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  transition: max-height 0.3s ease-out;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.gallery-item {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Forces consistent shape */
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops to fill container */
+  display: block;
+}
+
+/* Form Action Page Styling */
+.thank-you {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: white;
+  border-left: 6px solid var(--primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.thank-you h1 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.thank-you p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.thank-you a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.thank-you a:hover {
+  background: #3a2466;
+}
+
+/* Enhanced Submit Button */
+form button[type="submit"] {
+  background: linear-gradient(135deg, var(--primary), #6a4fb3);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #5a3ea6, #4b2e83);
+}
+
+form button[type="submit"] {
+  /* existing styles... */
+  margin-top: 1rem; 
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: var(--primary);
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .nav-links.show {
+    max-height: 500px; /* enough to show all links */
+  }
+}
+
+
+
+
+@media (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}

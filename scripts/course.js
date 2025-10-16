@@ -98,3 +98,13 @@ document.getElementById("cseBtn").addEventListener("click", () => renderCourses(
 
 // Initial render
 renderCourses();
+// Date.js
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+// Navigation.js  
+document.getElementById("hamburger").addEventListener("click", () => {
+  const nav = document.getElementById("navMenu");
+  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}
+);
+

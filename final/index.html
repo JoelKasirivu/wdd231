@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sacred Strokes — A spiritual sanctuary of uplifting reflections and divine inspiration." />
+  <meta name="author" content="Joel Kasirivu" />
+  <meta property="og:title" content="Sacred Strokes" />
+  <meta property="og:description" content="Explore spiritual reflections and divine inspiration." />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <link rel="icon" href="../final/images/favicon.ico" />
+  <link rel="stylesheet" href="../final/styles/main.css" />
+  <title>Sacred Strokes | Home</title>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Sacred Strokes</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="reflections.html">Reflections</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Welcome to Sacred Strokes</h1>
+    <p>A digital sanctuary for spiritual reflection and inspiration.</p>
+    <section id="quote-section"></section>
+  </main>
+
+  <!-- Quote Reflection Modal (moved outside <main>) -->
+  <div id="quoteModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <h2>Reflect on this Quote</h2>
+      <p id="modalText"></p> <!-- ✅ updated ID to match modal.js -->
+      <form action="form-action.html" method="get">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Your Reflection:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <label>
+          <input type="checkbox" name="subscribe" />
+          Subscribe to weekly inspiration
+        </label>
+
+        <button type="submit">Submit Reflection</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> Sacred Strokes</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    <p>
+      <a href="attribution.html">Attributions</a> |
+      <a href="https://www.loom.com/share/a8500188f1f04f3c90d99ee15cec886f?sid=317ce8b4-ab09-4460-bf2f-125f6a94f716">Demo Video</a>
+    </p>
+  </footer>
+
+  <!-- JavaScript Modules -->
+  <script type="module" src="../final/scripts/main.js"></script>
+  <script type="module" src="../final/scripts/fetchquotes.js"></script>
+  <script type="module" src="../final/scripts/modal.js"></script>
+  <script type="module" src="../final/scripts/storage.js"></script>
+  <script type="module" src="../final/scripts/reflections.js"></script>
+</body>
+</html>

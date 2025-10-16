@@ -1,0 +1,58 @@
+reflection.html before update
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Share your spiritual reflections and thoughts on Sacred Strokes." />
+  <meta name="author" content="Joel Kasirivu" />
+  <meta property="og:title" content="Sacred Strokes | Reflections" />
+  <meta property="og:description" content="Submit your spiritual reflections and connect with divine inspiration." />
+  <link rel="icon" href="../final/images/favicon.ico" />
+  <link rel="stylesheet" href="../final/styles/main.css" />
+  <title>Sacred Strokes | Reflections</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Sacred Strokes</a>
+      <button class="nav-toggle" aria-label="Toggle navigation"> ☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="reflections.html">Reflections</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Share Your Reflection</h1>
+    <form action="form-action.html" method="get">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Your Reflection:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <label>
+        <input type="checkbox" name="subscribe" />
+        Subscribe to weekly inspiration
+      </label>
+
+      <button type="submit">Submit Reflection</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> Sacred Strokes</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    <p>
+    <a href="attribution.html">Attributions</a> |
+    <a href="https://www.loom.com/share/a8500188f1f04f3c90d99ee15cec886f?sid=317ce8b4-ab09-4460-bf2f-125f6a94f716">Demo Video</a>
+    </p>
+  </footer>
+
+</body>
+</html>

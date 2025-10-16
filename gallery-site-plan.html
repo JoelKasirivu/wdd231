@@ -4,84 +4,137 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sacred Strokes Site Plan</title>
+
+  <!-- External CSS for layout and branding -->
   <link rel="stylesheet" href="./styles/gallery-site-plan.css" />
+  <link rel="stylesheet" href="./styles/main.css" />
 </head>
 <body>
+  <!-- Responsive Navigation -->
   <header>
-    <h1>Sacred Strokes Site Plan</h1>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Sacred Strokes</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="reflections.html">Reflections</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section>
-    <h2>Site Name</h2>
-    <p><strong>Sacred Strokes</strong> — It reflects the purpose of showcasing spiritually inspired artwork. “Sacred Strokes” evokes reverence and peace.This site will feature a gallery of spiritual artwork, artist bios, reflective blog posts, and a contact form for commissions or collaboration.”</p>
-  </section>
+  <main>
+    <!-- Site Name -->
+    <section>
+      <h2>Site Name</h2>
+      <p><strong>Sacred Strokes</strong> — It reflects the purpose of showcasing spiritually inspired artwork. “Sacred Strokes” evokes reverence and peace. This site will feature a gallery of spiritual artwork, artist bios, reflective blog posts, and a contact form for commissions or collaboration.</p>
+    </section>
 
-  <section>
-    <h2>Site Purpose</h2>
-    <p>The site serves as a digital sanctuary for spiritually inspired artwork. It offers curated galleries, artist reflections, and thematic essays that invite visitors to contemplate grace, discipleship, and divine beauty.</p>
-  </section>
+    <!-- Site Purpose -->
+    <section>
+      <h2>Site Purpose</h2>
+      <p>The site serves as a digital sanctuary for spiritually inspired artwork. It offers curated galleries, artist reflections, and thematic essays that invite visitors to contemplate grace, discipleship, and divine beauty.</p>
+    </section>
 
-  <section>
-    <h2>Scenarios</h2>
-    <ul>
-      <li>How can I explore artwork that reflects themes of redemption and light?</li>
-      <li>Where can I read the artists reflections or spiritual testimonies?</li>
-    </ul>
-  </section>
+    <!-- User Scenarios -->
+    <section>
+      <h2>Scenarios</h2>
+      <ul>
+        <li>How can I explore artwork that reflects themes of redemption and light?</li>
+        <li>Where can I read the artists’ reflections or spiritual testimonies?</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Color Schema</h2>
-    <ul>
-      <li><strong>#2E4053 (Slate Blue)</strong> — Used for headers and navigation to convey depth and calm.</li>
-      <li><strong>#F4F6F7 (Soft Gray)</strong> — Used for background and body text areas to maintain serenity and readability.</li>
-    </ul>
-  </section>
+    <!-- Color Schema -->
+    <section>
+      <h2>Color Schema</h2>
+      <ul>
+        <li><strong>#2E4053 (Slate Blue)</strong> — Used for headers and navigation to convey depth and calm.</li>
+        <li><strong>#F4F6F7 (Soft Gray)</strong> — Used for background and body text areas to maintain serenity and readability.</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Color Schema Use in Document</h2>
-    <p>This document uses the selected color schema in the background, headings, and text styling.</p>
-  </section>
+    <!-- Color Usage -->
+    <section>
+      <h2>Color Schema Use in Document</h2>
+      <p>This document uses the selected color schema in the background, headings, and text styling to reflect the spiritual tone of the site.</p>
+    </section>
 
-  <section>
-    <h2>Typography</h2>
-    <ul>
-      <li><strong>Playfair Display</strong> — Used for headings to evoke elegance and tradition.</li>
-      <li><strong>Open Sans</strong> — Used for body text to ensure clarity and accessibility.</li>
-    </ul>
-    <p>Both fonts are applied in this document using external CSS.</p>
-  </section>
+    <!-- Typography -->
+    <section>
+      <h2>Typography</h2>
+      <ul>
+        <li><strong>Playfair Display</strong> — Used for headings to evoke elegance and tradition.</li>
+        <li><strong>Open Sans</strong> — Used for body text to ensure clarity and accessibility.</li>
+      </ul>
+      <p>Both fonts are applied in this document using external CSS and Google Fonts.</p>
+    </section>
 
-  <section class="wireframe">
-    <h2>Wireframe</h2>
-    <h3>Mobile View</h3>
-    <img src="./images/sacred-strokes-mobile.png" alt="Mobile Wireframe" />
-    <ul>
-      <li>Logo and hamburger menu</li>
-      <li>Hero image with welcome message</li>
-      <li>“Enter the Gallery” button</li>
-      <li>Featured artwork with title and reflection</li>
-      <li>Navigation cards (Themes, Reflections, About)</li>
-      <li>Footer with social links and contact</li>
-    </ul>
+    <!-- Wireframes -->
+    <section class="wireframe">
+      <h2>Wireframe</h2>
 
-    <h3>Desktop View</h3>
-    <img src="./images/sacred-strokes-desktop-view.jpg" alt="Desktop Wireframe" />
-    <ul>
-      <li>Horizontal navigation bar with logo</li>
-      <li>Hero section with large image and welcome message</li>
-      <li>Grid layout of featured artworks (3-4 across)</li>
-      <li>Sidebar with navigation links</li>
-      <li>Footer with scripture quote, social links, and contact</li>
-    </ul>
-  </section>
+      <h3>Mobile View</h3>
+      <img src="./images/sacred-strokes-mobile.png" alt="Mobile Wireframe" />
+      <ul>
+        <li>Logo and hamburger menu</li>
+        <li>Hero image with welcome message</li>
+        <li>“Enter the Gallery” button</li>
+        <li>Featured artwork with title and reflection</li>
+        <li>Navigation cards (Themes, Reflections, About)</li>
+        <li>Footer with social links and contact</li>
+      </ul>
 
-  <section>
-    <h2>Valid HTML and CSS</h2>
-    <p>This document uses valid HTML5 and external CSS. It includes a proper title and passes validation checks.</p>
-  </section>
+      <h3>Desktop View</h3>
+      <img src="./images/sacred-strokes-desktop-view.jpg" alt="Desktop Wireframe" />
+      <ul>
+        <li>Horizontal navigation bar with logo</li>
+        <li>Hero section with large image and welcome message</li>
+        <li>Grid layout of featured artworks (3–4 across)</li>
+        <li>Sidebar with navigation links</li>
+        <li>Footer with scripture quote, social links, and contact</li>
+      </ul>
+    </section>
 
+    <!-- Validation -->
+    <section>
+      <h2>Valid HTML and CSS</h2>
+      <p>This document uses valid HTML5 and external CSS. It includes a proper title and passes validation checks for accessibility and responsiveness.</p>
+    </section>
+  </main>
+
+  <!-- Footer with dynamic year and last modified -->
   <footer>
+    <p>&copy; <span id="year"></span> Sacred Strokes</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
     <p>Created by Joel Kasirivu for WDD 231 | Web Frontend Development</p>
   </footer>
+
+  <!-- Script for responsive nav and dynamic footer -->
+  <script type="module">
+    // Toggle mobile nav
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        toggle.textContent = navLinks.classList.contains('show') ? '✖' : '☰';
+      });
+    }
+
+    // Auto-collapse nav on link click (mobile)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navLinks.classList.remove('show');
+          toggle.textContent = '☰';
+        }
+      });
+    });
+
+    // Dynamic footer year and last modified
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
 </body>
 </html>
